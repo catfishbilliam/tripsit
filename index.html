@@ -1,0 +1,42 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TripSit</title>
+
+  <!-- Import map to resolve 'three' bare specifier -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.1/build/three.module.js",
+      "three/": "https://unpkg.com/three@0.160.1/"
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="menu">
+    <button id="playBtn">Play Music &amp; Motion</button>
+    <button id="stopMotionBtn">Stop Motion</button>
+    <button id="resumeMotionBtn">Resume Motion</button>
+
+    <label for="trackSelect">Track:</label>
+    <select id="trackSelect">
+      <option value="bite.mp3">Bite</option>
+      <option value="talk_me_down.mp3">Talk Me Down</option>
+      <option value="444.mp3"">444</option>"
+    </select>
+
+    <label for="fractalSelect">Choose a fractal:</label>
+    <select id="fractalSelect"></select>
+  </div>
+
+  <canvas id="fractalCanvas"></canvas>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

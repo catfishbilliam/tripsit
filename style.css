@@ -1,0 +1,82 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  position: relative;
+  height: 100vh;
+}
+
+/* Fullscreen canvas */
+canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Menu container */
+#menu {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Buttons and selects */
+#menu button,
+#menu select {
+  font-size: 16px;
+  padding: 8px 12px;
+  color: #fff;
+  background: #222;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#menu button:hover,
+#menu select:hover {
+  background: #444;
+}
+
+/* Labels */
+#menu label {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 600px) {
+  #menu {
+    bottom: 0;
+    top: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 0;
+    padding: 8px;
+    justify-content: space-around;
+  }
+  #menu label {
+    display: none;
+  }
+  #menu button,
+  #menu select {
+    flex: 1;
+    margin: 0 4px;
+    font-size: 18px;
+    padding: 10px;
+  }
+}
